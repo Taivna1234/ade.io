@@ -1,28 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Eda website html</title>
-    </head>
-    <body>
-        <header style="height: 4vh; background-color: #180000; color: white;"></header>
-        
-        <header style="height: 8vh; background-color: #f0f0f0; display: flex; align-items: center; justify-content: flex-end;">
-            <a href=".." style="color: #3E0000; margin-right: 3%; text-decoration: none;"><img src=".." alt="shopping card" style="height: 20px; margin-right: 5px;"> </a>
-            <a href=".." style="color: #3E0000; margin-right: 2%; text-decoration: none;">Нэвтрэх</a>
-        </header> 
-        <article style="margin: 20px 0;">
-            <a href="#" style="display: block; color: #3E0000; text-decoration: none; margin-bottom: 5px;">Эмэгтэй хувцас</a>
-            <a href="#" style="display: block; color: #3E0000; text-decoration: none; margin-bottom: 5px;">Эрэгтэй хувцас</a>
-            <a href="#" style="display: block; color: #3E0000; text-decoration: none; margin-bottom: 5px;">Цахилгаан бараа</a>
-            <a href="#" style="display: block; color: #3E0000; text-decoration: none; margin-bottom: 5px;">Гэр ахуйн бараа</a>
-            <a href="#" style="display: block; color: #3E0000; text-decoration: none; margin-bottom: 5px;">Эрүүл мэндийн бараа</a>
-            <a href="#" style="display: block; color: #3E0000; text-decoration: none; margin-bottom: 5px;">Хүнс</a>
-            <a href="#" style="display: block; color: #3E0000; text-decoration: none; margin-bottom: 5px;">Хүүхдэд зориулсан</a>
-            <a href="#" style="display: block; color: #3E0000; text-decoration: none; margin-bottom: 5px;">Бэлэг дурсгал</a>
-            <a href="#" style="display: block; color: #3E0000; text-decoration: none; margin-bottom: 5px;">Хэвлэмэл бүтээгдэхүүн хаяг</a>
-        </article> 
-    </body>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eda website html</title>
+    <style>
+        .container {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        article {
+            padding: 10px;
+            width: 200px;
+            box-sizing: border-box;
+        }
+        .nav-and-search {
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            flex-grow: 1;
+            box-sizing: border-box;
+        }
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        .nav-links a {
+            color: #000;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            padding: 5px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+            margin-left: 20px;
+        }
+        .search-bar input[type="text"] {
+            border: none;
+            outline: none;
+            padding: 5px 10px;
+            font-size: 14px;
+            border-radius: 20px;
+            flex-grow: 1;
+        }
+        .search-bar input::placeholder {
+            color: #888;
+        }
+        .search-bar button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            margin-left: 5px;
+            font-size: 16px;
+            color: #888;
+        }
+        header {
+            background-color: #f0f0f0;
+            height: 8vh;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 0 20px;
+        }
+        .product-section {
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px; /* Margin to create space below the search */
+            width: 100%; /* Allow it to occupy the remaining space */
+        }
+        .product-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .product-list {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+        }
+        .product-card {
+            width: 150px;
+            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+            margin: 10px; /* Space around product cards */
+        }
+        .product-image {
+            width: 100%;
+            height: 100px; /* Placeholder height */
+            background-color: #eaeaea; /* Placeholder color */
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        /* Remove dots from list items */
+        ul {
+            padding: 0; /* Remove default padding */
+            list-style-type: none; /* Remove default list style */
+        }
+    </style>
+</head>
+<body>
+    <header style="height: 4vh; background-color: #180000; color: white;"></header>
+    <header style="height: 8vh; background-color: #f0f0f0; display: flex; align-items: center; justify-content: flex-end;">
+        <a href=".." style="color: #3E0000; margin-right: 3%; text-decoration: none;">
+            <img src=".." alt="shopping cart" style="height: 20px; margin-right: 5px;">
+        </a>
+        <a href=".." style="color: #3E0000; margin-right: 2%; text-decoration: none;">Нэвтрэх</a>
+    </header>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#" style="color: #3E0000; text-decoration: none; margin-bottom: 5px;">Эмэгтэй хувцас</a></li>
+                <li><a href="#" style="color: #3E0000; text-decoration: none; margin-bottom: 5px;">Эрэгтэй хувцас</a></li>
+                <li><a href="#" style="color: #3E0000; text-decoration: none; margin-bottom: 5px;">Цахилгаан бараа</a></li>
+                <li><a href="#" style="color: #3E0000; text-decoration: none; margin-bottom: 5px;">Гэр ахуйн бараа</a></li>
+                <li><a href="#" style="color: #3E0000; text-decoration: none; margin-bottom: 5px;">Эрүүл мэндийн бараа</a></li>
+                <li><a href="#" style="color: #3E0000; text-decoration: none; margin-bottom: 5px;">Хүнс</a></li>
+                <li><a href="#" style="color: #3E0000; text-decoration: none; margin-bottom: 5px;">Хүүхдэд зориулсан</a></li>
+                <li><a href="#" style="color: #3E0000; text-decoration: none; margin-bottom: 5px;">Бэлэг дурсгал</a></li>
+                <li><a href="#" style="color: #3E0000; text-decoration: none; margin-bottom: 5px;">Хэвлэмэл бүтээгдэхүүн хаяг</a></li>
+            </ul>
+        </nav>
+        <section class="nav-and-search">
+            <article class="nav-links">
+                <a href="#">Нүүр</a>
+                <a href="#">Холбогдох</a>
+                <a href="#">Бидний тухай</a>
+            </article>
+            <article class="search-bar">
+                <input type="text" placeholder="Та юу хайж байна вэ?">
+                <button>
+                    <i class="fas fa-search"></i>
+                </button>
+            </article>
+        </section>
+    </div>
+    <div style="display: flex; flex-direction: row; gap: 20px; margin-top: 10px;"> <!-- New container for category and product sections -->
+        <section class="product-section">
+            <div class="product-title">Шилдэг бүтээгдэхүүн</div>
+            <article class="product-list">
+                <article class="product-card">
+                    <div class="product-image"></div>
+                    <div>Product Name</div>
+                    <ul style="padding: 0; list-style-type: none;">
+                        <li>Үнэ: ₮XX.XX</li>
+                        <li>Үнэлгээ: ★★★★☆</li>
+                        <li><a href="..">View Details</a></li>
+                    </ul>
+                </article>
+                <article class="product-card">
+                    <div class="product-image"></div>
+                    <div>Product Name</div>
+                    <ul style="padding: 0; list-style-type: none;">
+                        <li>Үнэ: ₮XX.XX</li>
+                        <li>Үнэлгээ: ★★★★☆</li>
+                        <li><a href="..">Нарийн мэдээлэл</a></li>
+                    </ul>
+                </article>
+                <article class="product-card">
+                    <div class="product-image"></div>
+                    <div>Product Name</div>
+                    <ul style="padding: 0; list-style-type: none;">
+                        <li>Үнэ: ₮XX.XX</li>
+                        <li>Үнэлгээ: ★★★★☆</li>
+                        <li><a href="..">Нарийн мэдээлэл</a></li>
+                    </ul>
+                </article>
+            </article>
+        </section>
+    </div>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
 </html>
-
