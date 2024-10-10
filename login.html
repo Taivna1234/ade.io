@@ -34,7 +34,7 @@
     </section>
     <section>
         <a href="Sign_up2.html"><h3>Харилцагчаар бүртгэл үүсгэх</h3></a>    
-        <form action="your-server-endpoint" method="post" class="search-bar">
+        <form action="" method="post" class="search-bar" onsubmit="redirectToMain(event)">
             <article>
                 <input type="text" id="name" name="name" placeholder="Hэр" required>
             </article>
@@ -46,9 +46,16 @@
             </section>
             <section>
                 <p>Нууц үгээ мартсан уу</p>
-                <a href="./login.html"> Нэвтрэх</a>
             </section>
         </form>
+        
+        <script>
+        function redirectToMain(event) {
+            event.preventDefault();  
+            window.location.href = "Signed_main.html";  
+        }
+        </script>
+        
     </section>
     <footer>
         <section>
