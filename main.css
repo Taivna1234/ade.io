@@ -40,51 +40,6 @@
     --dark-text-color: #e0e0e0;
     --header1-height:30px;
 }
-@media only screen and (max-width: 600px) and (orientation: portrait) {
-    :root {
-        --nav-width: 100%;
-        --search-bar-width: 100%;
-        --product-card-width: 100%;
-        --product-section-width: 100%;
-        --product-image-height: 120px;
-    }
-
-    .nav-and-search {
-        flex-direction: column;
-        margin-left: 0;
-    }
-
-    .product-list {
-        flex-direction: column;
-    }
-
-    .product-card {
-        margin: 0;
-    }
-}
-@media only screen and (max-width: 900px) and (orientation: landscape) {
-    :root {
-        --nav-width: 25%;
-        --search-bar-width: 100%;
-        --product-card-width: 48%;
-        --product-section-width: 100%;
-        --product-image-height: 150px;
-    }
-
-    .nav-and-search {
-        margin-left: 0;
-    }
-
-    .product-list {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-    .product-card {
-        margin: 0 10px;
-    }
-}
-
 body {
     font-family: var(--main-font-family);
     margin: 0;
@@ -460,6 +415,159 @@ h2 {
     text-align: left;
     justify-content: center;
     margin-left: 350px;   
+}
+@media only screen and (max-width: 600px) and (orientation: portrait) {
+    :root {
+        --nav-width: 100%;
+        --search-bar-width: 100%;
+        --product-card-width: 100%;
+        --product-section-width: 100%;
+        --product-image-height: 120px;
+        --button-padding: 8px 16px;
+        --nav-and-search-margin-left: 0;
+        --nav-gap: 10px;
+    }
+
+    body {
+        padding: 0 10px;
+    }
+
+    .container {
+        flex-direction: column;
+        gap: var(--nav-gap);
+    }
+
+    nav {
+        width: var(--nav-width);
+        padding: 10px;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .nav-and-search {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .search-bar {
+        margin: 10px 0;
+        width: var(--search-bar-width);
+    }
+
+    .header1, .header2 {
+        justify-content: center;
+        padding: 10px;
+        height: auto;
+    }
+
+    .product-section {
+        width: var(--product-section-width);
+        margin: 0;
+    }
+
+    .product-list {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .product-card {
+        width: var(--product-card-width);
+    }
+
+    button, .button1, .button2, .button3 {
+        width: 100%;
+        padding: var(--button-padding);
+    }
+
+    .commerce1 {
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
+
+    .product-section-2 {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+/* Mobile Horizontal (Landscape Mode) */
+@media only screen and (max-width: 900px) and (orientation: landscape) {
+    :root {
+        --nav-width: 25%;
+        --product-card-width: 48%;
+        --product-section-width: 100%;
+        --product-image-height: 150px;
+        --search-bar-width: 100%;
+        --nav-gap: 15px;
+    }
+
+    body {
+        padding: 0 15px;
+    }
+
+    .container {
+        flex-direction: row;
+        gap: var(--nav-gap);
+    }
+
+    nav {
+        width: var(--nav-width);
+        padding: 15px;
+        border-right: 1px solid var(--border-color);
+    }
+
+    .nav-and-search {
+        margin-left: 0;
+        margin-bottom: 10px;
+        flex-direction: row;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .search-bar {
+        width: var(--search-bar-width);
+    }
+
+    .header1, .header2 {
+        height: auto;
+        padding: 15px;
+    }
+
+    .product-section {
+        width: var(--product-section-width);
+    }
+
+    .product-list {
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .product-card {
+        width: var(--product-card-width);
+    }
+
+    button, .button1, .button2, .button3 {
+        padding: var(--button-padding);
+    }
+
+    .commerce1 {
+        width: 90%;
+        height: auto;
+        margin: 15px 0;
+    }
+
+    .product-section-2 {
+        width: 100%;
+        margin: auto;
+    }
 }
 
 /* General Footer Styling */
