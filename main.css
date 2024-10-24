@@ -40,51 +40,48 @@
     --dark-text-color: #e0e0e0;
     --header1-height:30px;
 }
-@media (max-width: 600px) and (orientation: portrait) {
+@media only screen and (max-width: 600px) and (orientation: portrait) {
     :root {
-        --nav-width: 30%;
-        --product-section-width: 100%;
+        --nav-width: 100%;
+        --search-bar-width: 100%;
         --product-card-width: 100%;
-        --search-bar-width: 180px;
-        --nav-and-search-margin-left: 10px;
-        --nav-gap: 10px;
-        --button-font-size: 14px;
+        --product-section-width: 100%;
+        --product-image-height: 120px;
+    }
+
+    .nav-and-search {
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    .product-list {
+        flex-direction: column;
+    }
+
+    .product-card {
+        margin: 0;
+    }
+}
+@media only screen and (max-width: 900px) and (orientation: landscape) {
+    :root {
+        --nav-width: 25%;
+        --search-bar-width: 100%;
+        --product-card-width: 48%;
+        --product-section-width: 100%;
         --product-image-height: 150px;
     }
 
-    body {
-        gap: 5%;
-    }
-}
-@media (max-width: 900px) and (orientation: landscape) {
-    :root {
-        --nav-width: 25%;
-        --product-section-width: 90%;
-        --product-card-width: 200px;
-        --search-bar-width: 200px;
-        --nav-and-search-margin-left: 20px;
-        --button-font-size: 15px;
-        --product-image-height: 160px;
+    .nav-and-search {
+        margin-left: 0;
     }
 
-    body {
-        gap: 7%;
-    }
-}
-
-@media (min-width: 901px) and (max-width: 1024px) {
-    :root {
-        --nav-width: 22%;
-        --product-section-width: 85%;
-        --product-card-width: 220px;
-        --search-bar-width: 220px;
-        --nav-and-search-margin-left: 50px;
-        --button-font-size: 15px;
-        --product-image-height: 170px;
+    .product-list {
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 
-    body {
-        gap: 8%;
+    .product-card {
+        margin: 0 10px;
     }
 }
 
