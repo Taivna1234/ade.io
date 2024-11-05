@@ -3,11 +3,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Sign_up.css">
     <title>Eda Sign-up HTML</title>
     
 </head>
 <body>
-    <header>
+    <header class="header1">
         <article>
             <h3>Eda</h3>
         </article>
@@ -16,9 +17,9 @@
         <article>
             <section class="nav-and-search">
                 <article class="nav-links">
-                    <a href="index.html">Нүүр</a>
-                    <a href="Contact.html">Холбогдох</a>
-                    <a href="about.html">Бидний тухай</a>
+                    <a href="#">Нүүр</a>
+                    <a href="#">Холбогдох</a>
+                    <a href="#">Бидний тухай</a>
                 </article>
                 <article class="search-bar">
                     <input type="text" placeholder="Та юу хайж байна вэ?">
@@ -29,61 +30,42 @@
             </section>
         </article>
     </header>
-    <section>
-        <img src="" alt="login logo"> 
-    </section>
-    <section>
-        <a href="Sign_up2.html"><h3>Харилцагчаар бүртгэл үүсгэх</h3></a>    
-        <form action="" method="post" class="search-bar" onsubmit="redirectToMain(event)">
-            <article>
-                <input type="text" id="name" name="name" placeholder="Hэр" required>
-            </article>
-            <article>
-                <input type="password" id="password" name="password" placeholder="Нууц үг" required>
-            </article>
-            <section>
-                <button type="submit">Нэвтрэх</button>
-            </section>
-            <section>
-                <p>Нууц үгээ мартсан уу</p>
-            </section>
+<div class="container">
+    <div class="image-section">
+    </div>
+    <div class="form-section">
+        <a href="Sign_up2.html"><h3>Харилцагчаар бүртгэл үүсгэх</h3></a> 
+        <form action="" method="post" onsubmit="redirectToMain(event)">
+            <input type="text" id="name" name="name" placeholder="Нэр" required>
+            <input type="password" id="password" name="password" placeholder="Нууц үг" required>
+            <button type="submit">Нэвтрэх</button>
         </form>
-        
+        <a href=""><p>Нууц үгээ мартсан уу</a>
         <script>
-        function redirectToMain(event) {
-            event.preventDefault();  
-            window.location.href = "Signed_main.html";  
-        }
-        </script>
-        
-    </section>
+            function redirectToMain(event) {
+                event.preventDefault();  
+                window.location.href = "Signed_main.html";  
+            }
+            </script>
+    </div>
+</div>
     <footer>
-        <section>
-            <h2>Холбогдох</h2>
-            <p>111 Bijoy sarani, Dhaka, DH 1515, Mongolia.</p>
-            <p>dsasdf@gmail.com</p>
-            <p>+976-88888-9999</p>
+        <section class="footer-contact">
+            <ul>
+                <li><h2>Холбогдох</h2></li>
+                <li><p>111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.</p></li>
+                <li><p>dsasdf@gmail.com</p></li>
+                <li><p>+976-88888-9999</p></li>
+            </ul>
         </section>
-        <section>
-            <a href="#">Аккаунт</a>
-             <a href="#">Таны аккаунт</a>
-            <a href="#">Бүртгүүлэх</a>
-            <a href="#">Карт</a>
-            <a href="#">Хуулын жагсаалт</a>
-        </section>
-        <section>
-            <h2>апп татах</h2>
-            <img src="" alt="QR Code">
-            <p>
-                <img src="" alt="Google Play">
-                <img src="" alt="App Store">
-            </p>
-            <p>
-                <img src="" alt="Facebook">
-                <img src="" alt="Twitter">
-                <img src="" alt="Instagram">
-                <img src="" alt="LinkedIn">
-            </p>
+    
+        <section class="footer-nav">
+            <ul>
+                <li><a href="account.html">Таны аккаунт</a></li>
+                <li><a href="Sign_up.html">Бүртгүүлэх</a></li>
+                <li><a href="#">Карт</a></li>
+                <li><a href="#">Хүслийн жагсаалт</a></li>
+            </ul>
         </section>
     </footer>
     

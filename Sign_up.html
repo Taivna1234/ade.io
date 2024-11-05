@@ -3,11 +3,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Sign_up.css">
     <title>Eda Sign-up HTML</title>
     
 </head>
 <body>
-    <header>
+    <header class="header1">
         <article>
             <h3>Eda</h3>
         </article>
@@ -29,60 +30,42 @@
             </section>
         </article>
     </header>
-    <section>
-        <img src="" alt="Sign_up logo"> 
-    </section>
-    <section>
-        <a href="Sign_up2.html"><h3>Харилцагчаар бүртгэл үүсгэх</h3></a>    
-        <form action="your-server-endpoint" method="post" class="search-bar">
-            <article>
-                <input type="text" id="name" name="name" placeholder="Hэр" required>
-            </article>
-            <article>
+    <div class="container">
+        <div class="image-section">
+        </div>
+        <div class="form-section">
+           <a href="Sign_up2.html"><h3>Харилцагчаар бүртгэл үүсгэх</h3></a>
+            <form action="your-server-endpoint" method="post">
+                <input type="text" id="name" name="name" placeholder="Нэр" required>
                 <input type="text" id="email" name="email" placeholder="Имэйл эсвэл Утасны дугаар" required>
-            </article>
-            <article>
                 <input type="password" id="password" name="password" placeholder="Нууц үг" required>
-            </article>
-            <article>
                 <input type="text" id="address" name="address" placeholder="Гэрийн хаяг" required>
-            </article>
-            <section>
+                
                 <button type="submit">Бүртгэл үүсгэх</button>
-            </section>
-            <section>
-                <p>бүртгэлтэй юу</p>
-                <a href="./login.html"> Нэвтрэх</a>
-            </section>
-        </form>
-    </section>
+            </form>
+
+           <a href="login.html"><p>Бүртгэлтэй юу?</a>
+                <a href="./login.html">Нэвтрэх</a>
+            </p>
+        </div>
+    </div>
     <footer>
-        <section>
-            <h2>Холбогдох</h2>
-            <p>111 Bijoy sarani, Dhaka, DH 1515, Mongolia.</p>
-            <p>dsasdf@gmail.com</p>
-            <p>+976-88888-9999</p>
+        <section class="footer-contact">
+            <ul>
+                <li><h2>Холбогдох</h2></li>
+                <li><p>111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.</p></li>
+                <li><p>dsasdf@gmail.com</p></li>
+                <li><p>+976-88888-9999</p></li>
+            </ul>
         </section>
-        <section>
-            <a href="#">Аккаунт</a>
-             <a href="#">Таны аккаунт</a>
-            <a href="#">Бүртгүүлэх</a>
-            <a href="#">Карт</a>
-            <a href="#">Хуулын жагсаалт</a>
-        </section>
-        <section>
-            <h2>апп татах</h2>
-            <img src="" alt="QR Code">
-            <p>
-                <img src="" alt="Google Play">
-                <img src="" alt="App Store">
-            </p>
-            <p>
-                <img src="" alt="Facebook">
-                <img src="" alt="Twitter">
-                <img src="" alt="Instagram">
-                <img src="" alt="LinkedIn">
-            </p>
+    
+        <section class="footer-nav">
+            <ul>
+                <li><a href="account.html">Таны аккаунт</a></li>
+                <li><a href="Sign_up.html">Бүртгүүлэх</a></li>
+                <li><a href="#">Карт</a></li>
+                <li><a href="#">Хүслийн жагсаалт</a></li>
+            </ul>
         </section>
     </footer>
     

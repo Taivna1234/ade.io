@@ -1,10 +1,15 @@
 :root {
+    --size-1:0.2rem;
+    --size-2:0.4rem;
+
     --bg-color: #D4F1F9;
     --main-font-family: Arial, sans-serif;
     --main-gap: 10%;
     --nav-width: 20%;
     --nav-padding: 20px;
     --border-color: black;
+    --border-default: 1px var(--bg-color) solid;
+    --border-narrow: 1px var(--bg-color) solid;
     --link-color: #3E0000;
     --link-font-size: 18px;
     --nav-and-search-margin-bottom: 20px;
@@ -26,7 +31,7 @@
     --product-image-height: 180px;
     --button-bg-color: #3E0000;
     --button-color: white;
-    --button-padding: 10px 20px;
+    --button-padding: var(--size2) 20px;
     --button-radius: 5px;
     --button-font-size: 16px;
     --commerce-width: 60%;
@@ -85,11 +90,11 @@ nav ul {
     padding: 0;
 }
 
-nav ul li {
+nav li {
     margin-bottom: 10px;
 }
 
-nav ul li a {
+nav a {
     text-decoration: none;
     color: var(--link-color);
     font-size: var(--link-font-size);
@@ -480,7 +485,7 @@ h2 {
     }
 
     button, .button1, .button2, .button3 {
-        width: 100%;
+        width: 50%;
         padding: var(--button-padding);
     }
 
@@ -494,9 +499,13 @@ h2 {
         width: 100%;
         margin: 0;
     }
+    .product-section-3 {
+     margin: 0%;
+     width: 100%;
+    }
 }
 
-/* Mobile Horizontal (Landscape Mode) */
+/* Mobile Horizontal  */
 @media only screen and (max-width: 900px) and (orientation: landscape) {
     :root {
         --nav-width: 25%;
